@@ -37,6 +37,7 @@ except Exception as e:
 # Review samples
 print(f"\nFound {len(samples)} text samples")
 
+# Initialize list for storing user's judgements
 reviewed = []
 for i, (text, filter_result, url) in enumerate(samples[:20]):
     print("\n" + "="*60)
@@ -71,4 +72,4 @@ if disagreements:
         print(f"{i+1}. Sample {sample_num}: Filter said {'PASS' if filter_result else 'FAIL'}")
         print(f"   Reason for disagreement: {reason}")
 
-print("\nUse these findings to write your 2-5 sentence response for part (b).")
+print("\nUse these findings to write the 2-5 sentence response for part (b).")
